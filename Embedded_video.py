@@ -21,10 +21,10 @@ app.layout = html.Div([
 @app.callback(Output('target', 'children'), [Input('dropdown', 'value')])
 def embed_iframe(value):
     videos = {
-        'video1': '5KygwcZ545U',
-        'video2': 'D6yAOjTbZb8',
+        'video1': 'https://www.youtube.com/embed/Ia6c6uIIb_Q',
+        'video2': 'http://94.254.52.245:8081',
     }
-    return html.Iframe(src=f'https://www.youtube.com/embed/{videos[value]}')
+    return html.Iframe(src=f'{videos[value]}')
 
 if __name__ == '__main__':
     app.run_server(debug=True)
